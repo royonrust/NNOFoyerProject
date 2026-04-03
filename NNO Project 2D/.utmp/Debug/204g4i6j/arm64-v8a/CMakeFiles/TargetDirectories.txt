@@ -1,0 +1,8 @@
+C:/Users/royon/NNOFoyerProject/NNO Project 2D/.utmp/Debug/204g4i6j/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/royon/NNOFoyerProject/NNO Project 2D/.utmp/Debug/204g4i6j/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/royon/NNOFoyerProject/NNO Project 2D/.utmp/Debug/204g4i6j/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/royon/NNOFoyerProject/NNO Project 2D/.utmp/Debug/204g4i6j/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/royon/NNOFoyerProject/NNO Project 2D/.utmp/Debug/204g4i6j/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+C:/Users/royon/NNOFoyerProject/NNO Project 2D/.utmp/Debug/204g4i6j/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/royon/NNOFoyerProject/NNO Project 2D/.utmp/Debug/204g4i6j/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/royon/NNOFoyerProject/NNO Project 2D/.utmp/Debug/204g4i6j/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
