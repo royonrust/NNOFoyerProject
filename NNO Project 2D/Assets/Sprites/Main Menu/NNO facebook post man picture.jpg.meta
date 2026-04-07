@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 617f2db05a7434349b2bce9e52ac16b4
+guid: ce38430670973e646ba7154913ca6eab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7069837847517300285
-    second: treble clef_0
+      213: 8793950867879015768
+    second: NNO facebook post man picture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: treble clef_0
+      name: NNO facebook post man picture_0
       rect:
         serializedVersion: 2
-        x: 169
-        y: 81
-        width: 415
-        height: 1117
+        x: 0
+        y: 0
+        width: 1365
+        height: 1365
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3681e0901c1d1260800000000000000
-      internalID: 7069837847517300285
+      spriteID: 855ba24d8b36a0a70800000000000000
+      internalID: 8793950867879015768
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      treble clef_0: 7069837847517300285
+      NNO facebook post man picture_0: 8793950867879015768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

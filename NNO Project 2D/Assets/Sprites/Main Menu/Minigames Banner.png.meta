@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 617f2db05a7434349b2bce9e52ac16b4
+guid: 0f8ae5dee3e47c1468d3737191b1d4c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7069837847517300285
-    second: treble clef_0
+      213: -7493494633706334062
+    second: Screenshot 2026-04-06 141407_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: treble clef_0
+      name: Screenshot 2026-04-06 141407_0
       rect:
         serializedVersion: 2
-        x: 169
-        y: 81
-        width: 415
-        height: 1117
+        x: 0
+        y: 0
+        width: 527
+        height: 1081
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3681e0901c1d1260800000000000000
-      internalID: 7069837847517300285
+      spriteID: 29853a73552c10890800000000000000
+      internalID: -7493494633706334062
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      treble clef_0: 7069837847517300285
+      Screenshot 2026-04-06 141407_0: -7493494633706334062
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
