@@ -683,7 +683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2180101218371375410, guid: b4bb8943c3a52a44bb92577d1de4f785, type: 3}
       propertyPath: m_text
-      value: Assisted Website
+      value: Information Pages
       objectReference: {fileID: 0}
     - target: {fileID: 5855626669282297816, guid: b4bb8943c3a52a44bb92577d1de4f785, type: 3}
       propertyPath: m_Sprite
@@ -719,7 +719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7057328946529848242, guid: b4bb8943c3a52a44bb92577d1de4f785, type: 3}
       propertyPath: m_Name
-      value: Assisted Website Banner
+      value: Information Pages Banner
       objectReference: {fileID: 0}
     - target: {fileID: 7776623379087301979, guid: b4bb8943c3a52a44bb92577d1de4f785, type: 3}
       propertyPath: m_SizeDelta.x
