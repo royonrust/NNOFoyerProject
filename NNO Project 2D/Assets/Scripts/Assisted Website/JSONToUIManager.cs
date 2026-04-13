@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -10,23 +11,48 @@ public class JSONToUIManager : MonoBehaviour
     [SerializeField] private bool isDeveloper;
     public bool canEdit() => isDeveloper;
 
+    //      temp
+    
     public Button developerButton;
 
     public void ClickDeveloperButton()
     {
         isDeveloper = !isDeveloper;
         developerButton.GetComponentInChildren<TextMeshProUGUI>().text =
-            isDeveloper ? "Yes Developer" : "No Developer";
+            isDeveloper ? "Yes Dev" : "No Dev";
+        
+        navbar?.RefreshLists();
     }
     
+    public void RemoveUI()
+    {
+        foreach (Transform child in pagesHolder) 
+            DestroyImmediate(child.gameObject);
+        
+        navbar?.RefreshLists();
+    }
+    
+    //      /temp
+    
+    [SerializeField] private GameObject defaultTemplate;
     [SerializeField] private Transform pagesHolder;
+    
+    private void LoadDefaultTemplate()
+    {
+        Instantiate(defaultTemplate, pagesHolder);
+        navbar?.BootToHome();
+    }
+    
     [SerializeField] private List<GameObject> prefabEntries;
-
     private Dictionary<string, GameObject> uiPrefabDictionary;
+    
+    private Navbar navbar;
 
     private void Awake()
     {
         uiPrefabDictionary = new();
+
+        navbar = GetComponentInChildren<Navbar>(true);
 
         foreach (GameObject entry in prefabEntries)
         {
@@ -34,21 +60,24 @@ public class JSONToUIManager : MonoBehaviour
                 if (!uiPrefabDictionary.ContainsKey(uiElement.prefabID))
                     uiPrefabDictionary.Add(uiElement.prefabID, uiElement.gameObject);
         }
+        
+        Construct();
     }
 
     public void Construct()
     {
+        RemoveUI();
+        
         string path = Path.Combine(Application.persistentDataPath, "UISetup.json");
 
-        if (!File.Exists(path))
+        if (!File.Exists(path) || String.IsNullOrEmpty(File.ReadAllText(path)))
         {
-            Debug.LogWarning("No save file found.");
+            Debug.LogWarning("No valid save file found, loaded default template");
+            LoadDefaultTemplate();
             return;
         }
 
         string json = File.ReadAllText(path);
-
-        Debug.Log("Succesfully loaded: " + path);
         
         UIElementData loadedData = JsonConvert.DeserializeObject<UIElementData>(
             json, new JsonSerializerSettings
@@ -61,9 +90,17 @@ public class JSONToUIManager : MonoBehaviour
                 }
             });
 
-        SpawnNewUIPrefab(loadedData, pagesHolder);
+        if (!uiPrefabDictionary.ContainsKey(loadedData.prefabID))
+        {
+            Debug.LogWarning("First child ID not present anymore, aborting build and loading default template");
+            LoadDefaultTemplate();
+            return;
+        }
+
+        Spawn(loadedData, pagesHolder);
+        navbar?.BootToHome();
     }
-    
+
     public void SaveCurrentUI()
     {
         if (!GetComponentInChildren<UIElementBase>(true)) return;
@@ -89,33 +126,22 @@ public class JSONToUIManager : MonoBehaviour
         UIElementData data = uiElement.SetupGenerateData();
         data.children = new List<UIElementData>();
         
-        foreach (Transform child in uiElement.transform)
+        foreach (Transform child in uiElement.GetSpawnRoot())
             if (child.TryGetComponent<UIElementBase>(out var childUI))
                 data.children.Add(GenerateDataFromUI(childUI));
 
         return data;
     }
     
-    private void SpawnNewUIPrefab(UIElementData data, Transform parent)
+    private void Spawn(UIElementData data, Transform parent)
     {
-        if (!string.IsNullOrEmpty(data.parentIdentifier))
-        {
-            var foundParent = GameObject.Find(data.parentIdentifier);
-            if (foundParent != null) parent = foundParent.transform;
-        }
+        GameObject prefab = uiPrefabDictionary[data.prefabID];
+        GameObject instance = Instantiate(prefab, parent);
 
-        GameObject newUI = Instantiate(uiPrefabDictionary[data.prefabID], parent);
+        UIElementBase element = instance.GetComponent<UIElementBase>();
+        element.SetupApplyData(data);
         
-        if (newUI.TryGetComponent<UIElementBase>(out var uiElement))
-            uiElement.SetupApplyData(data);
-        
-        if (data.children != null)
-            foreach (var childData in data.children)
-                SpawnNewUIPrefab(childData, newUI.transform);
-    }
-
-    public void RemoveUI()
-    {
-        foreach (Transform child in pagesHolder) Destroy(child.gameObject);
+        foreach (var child in data.children)
+            Spawn(child, element.GetSpawnRoot());
     }
 }

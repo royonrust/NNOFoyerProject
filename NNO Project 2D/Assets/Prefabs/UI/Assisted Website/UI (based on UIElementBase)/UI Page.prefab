@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3751830695348576091}
   - component: {fileID: 8883178014870263919}
   m_Layer: 5
-  m_Name: UI Page Prefab
+  m_Name: UI Page
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -613, y: 0}
-  m_SizeDelta: {x: -1426, y: -200}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8883178014870263919
 MonoBehaviour:
@@ -50,7 +50,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIPagePrefab
   id: Page
-  parentName: 
+  contentRoot: {fileID: 0}
+  pageType: 0
+  isHidden: 0
 --- !u!1 &7105728318925626653
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

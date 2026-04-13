@@ -3,20 +3,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UITextblock : UIElementBase, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class UITextblock : DraggableUIElement
 {
-    public TextMeshProUGUI tmp;
-    public TMP_InputField inputField;
-    public CanvasGroup canvasGroup;
-    private bool canEdit;
-    
+    [SerializeField] private TextMeshProUGUI tmp;
+    [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private CanvasGroup canvasGroup;
+
     public override UIElementData GenerateData()
     {
         return new UITextblockData
         {
             prefabID = prefabID,
             anchoredPosition = ((RectTransform)transform).anchoredPosition,
-            parentIdentifier = parentName,
             text = tmp.text
         };
     }
@@ -41,28 +39,32 @@ public class UITextblock : UIElementBase, IBeginDragHandler, IDragHandler, IEndD
         inputField.gameObject.SetActive(false);
     }
     
-    public void OnDrag(PointerEventData eventData)
-    {
-        if (!canEdit) return;
-        transform.position = eventData.position;
-    }
-    public void OnPointerClick(PointerEventData eventData)
+    public override void OnPointerClick(PointerEventData eventData)
     {
         if (!canEdit) return;
         inputField.gameObject.SetActive(true);
         inputField.ActivateInputField();
     }
-    public void OnBeginDrag(PointerEventData eventData)
+    
+    public override void OnBeginDrag(PointerEventData eventData)
     {
         if (!canEdit) return;
+        parentAfterDrag = transform.parent;
+        transform.SetParent(transform.root);
+        transform.SetAsLastSibling();
+        
+        RectTransform rect = GetComponent<RectTransform>();
+        rect.sizeDelta = new Vector2(500, 350);
+        
         canvasGroup.blocksRaycasts = false;
     }
-    public void OnEndDrag(PointerEventData eventData)
+    
+    public override void OnEndDrag(PointerEventData eventData)
     {
         if (!canEdit) return;
+        transform.SetParent(parentAfterDrag);
         canvasGroup.blocksRaycasts = true;
     }
-    
 }
 
 [Serializable]
