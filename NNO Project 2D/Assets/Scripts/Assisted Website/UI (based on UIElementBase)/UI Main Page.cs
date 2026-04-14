@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIMainPage : UIElementBase
 {
@@ -17,7 +19,7 @@ public class UIMainPage : UIElementBase
         };
     }
 
-    public override void ApplyData(UIElementData baseData)
+    public override void ApplyCustomData(UIElementData baseData)
     {
         var d = (UIMainPageData)baseData;
 
@@ -26,6 +28,22 @@ public class UIMainPage : UIElementBase
         
         if (isHidden && gameObject.activeSelf) 
             gameObject.SetActive(false);
+    }
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForEndOfFrame(); 
+        AdaptHeight();
+    }
+
+    public void AdaptHeight()
+    {
+        float contentHeight = LayoutUtility.GetPreferredHeight((RectTransform)GetSpawnRoot());
+        
+        RectTransform rect = GetComponent<RectTransform>();
+        RectTransform canvasRect = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
+        
+        rect.sizeDelta = new Vector2(rect.sizeDelta.x, Mathf.Max(canvasRect.rect.height, contentHeight));
     }
 }
 

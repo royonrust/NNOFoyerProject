@@ -23,33 +23,44 @@ public abstract class UIElementBase : MonoBehaviour
     {
         return contentRoot != null ? contentRoot : transform;
     }
-
-    public UIElementData SetupGenerateData()
-    {
-        return GenerateData();
-    }
+    
     public abstract UIElementData GenerateData();
     
-    public void SetupApplyData(UIElementData importedData)
+    public void ApplyGeneralData(UIElementData importedData)
     {
         RectTransform rect = GetComponent<RectTransform>();
         rect.anchoredPosition = importedData.anchoredPosition;
-        ApplyData(importedData);
+        RefreshPageDimensions();
+        ApplyCustomData(importedData);
     }
-    public abstract void ApplyData(UIElementData baseData);
+    
+    public abstract void ApplyCustomData(UIElementData baseData);
+    
+    public void RefreshPageDimensions()
+    {
+        UIMainPage page = GetComponent<UIMainPage>() ?? GetComponentInParent<UIMainPage>();
+    
+        if (page == null)
+            return;
+    
+        page.AdaptHeight();
+    }
 }
 
 public abstract class DraggableUIElement : UIElementBase, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
     [HideInInspector] public bool canEdit;
+    [HideInInspector] public bool isDraggable;
     [HideInInspector] public Transform parentAfterDrag;
     
     public abstract void OnBeginDrag(PointerEventData eventData);
+    
     public void OnDrag(PointerEventData eventData)
     {
-        if (!canEdit) return;
+        if (!canEdit || !isDraggable) return;
         transform.position = eventData.position;
     }
+    
     public abstract void OnEndDrag(PointerEventData eventData);
     public abstract void OnPointerClick(PointerEventData eventData);
 }

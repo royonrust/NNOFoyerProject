@@ -10,14 +10,17 @@ public class Navbar : MonoBehaviour
     
     [SerializeField] private GameObject pageUIElement;
     
-    private UIMainPage holder;
+    private UIGenericElement holder;
     private UIMainPage[] currentPages;
     [HideInInspector] public List<PageType> pageTypes;
     [HideInInspector] public PageType currentlyOpenedPage;
 
+    private JSONToUIManager manager;
+
     public void BootToHome()
     {
-        addExtraPagesButton = GetComponentInChildren<NavbarAddPagesButton>().gameObject;
+        addExtraPagesButton = GetComponentInChildren<NavbarAddPagesButton>(true).gameObject;
+        manager ??= GetComponentInParent<JSONToUIManager>();
         
         gameObject.SetActive(true);
         GoToPage(PageType.home);
@@ -25,8 +28,9 @@ public class Navbar : MonoBehaviour
 
     public void RefreshLists(bool refreshButtons = true)
     {
-        holder = GetComponentInParent<JSONToUIManager>()?.GetComponentInChildren<UIMainPage>(true);
-
+        manager ??= GetComponentInParent<JSONToUIManager>();
+        holder = manager?.GetComponentInChildren<UIGenericElement>(true);
+        
         if (holder == null)
         {
             RefreshNavbarButtons();
@@ -45,16 +49,19 @@ public class Navbar : MonoBehaviour
     
     private void RefreshNavbarButtons()
     {
+        manager ??= GetComponentInParent<JSONToUIManager>();
+        bool canEdit = manager.canEdit();
+        
         foreach (Transform child in transform) 
             if (child.TryGetComponent(out NavbarButton _))
                 Destroy(child.gameObject);
         
         foreach (var page in pageTypes) 
-            SpawnNavbarButton(page);
+            if (canEdit || !GetPageFromList(page).isHidden)
+                SpawnNavbarButton(page);
         
         addExtraPagesButton?.SetActive(
-            pageTypes.Count < Enum.GetValues(typeof(PageType)).Length &&
-            GetComponentInParent<JSONToUIManager>().canEdit());
+            pageTypes.Count < Enum.GetValues(typeof(PageType)).Length - 1 && canEdit);  //Ignore empty page type
         
         addExtraPagesButton?.transform.SetAsLastSibling();
     }
@@ -92,9 +99,19 @@ public class Navbar : MonoBehaviour
 
     public void AddPage(PageType page)
     {
-        var newPage = Instantiate(pageUIElement, holder.transform);
-        var pageScript = newPage.GetComponent<UIMainPage>();
+        GameObject newPagePrefab = manager.prefabEntries
+            .FirstOrDefault(p => p.GetComponent<UIMainPage>()?.pageType == page);
 
+        if (newPagePrefab == null)
+        {
+            Debug.LogWarning("page prefab not found, aborting");
+            return;
+        }
+        
+        GameObject newPage = Instantiate(newPagePrefab, holder.GetSpawnRoot());
+        UIMainPage pageScript = newPage.GetComponent<UIMainPage>();
+
+        pageScript.RefreshPageDimensions();
         pageScript.pageType = page;
         GoToPage(page);
     }
@@ -151,6 +168,7 @@ public class Navbar : MonoBehaviour
 
 public enum PageType
 {
+    empty, 
     home,
     news,
     about,

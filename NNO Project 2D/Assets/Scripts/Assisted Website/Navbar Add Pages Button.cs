@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -13,9 +14,9 @@ public class NavbarAddPagesButton : MonoBehaviour
 
     public void OpenPopupWindow()
     {
-        var missingPageTypes = Enum.GetValues(typeof(PageType))
+        List<PageType> missingPageTypes = Enum.GetValues(typeof(PageType))
             .Cast<PageType>()
-            .Where(p => !navbar.pageTypes.Contains(p))
+            .Where(p => p != PageType.empty && !navbar.pageTypes.Contains(p))
             .ToList();
             
         foreach (Transform child in popupWindow.transform)

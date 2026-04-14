@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1304995102636488383}
   m_Layer: 5
   m_Name: UI Viewport
-  m_TagString: Untagged
+  m_TagString: UI Viewport Holder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

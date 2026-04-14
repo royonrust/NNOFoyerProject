@@ -4,7 +4,6 @@ using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
 using TMPro;
-using UnityEngine.UI;
 
 public class JSONToUIManager : MonoBehaviour
 {
@@ -13,12 +12,12 @@ public class JSONToUIManager : MonoBehaviour
 
     //      temp
     
-    public Button developerButton;
+    public TextMeshProUGUI developerButton;
 
     public void ClickDeveloperButton()
     {
         isDeveloper = !isDeveloper;
-        developerButton.GetComponentInChildren<TextMeshProUGUI>().text =
+        developerButton.text =
             isDeveloper ? "Yes Dev" : "No Dev";
         
         navbar?.RefreshLists();
@@ -41,9 +40,13 @@ public class JSONToUIManager : MonoBehaviour
     {
         Instantiate(defaultTemplate, pagesHolder);
         navbar?.BootToHome();
+
+        UIMainPage[] openPages = pagesHolder.GetComponentsInChildren<UIMainPage>();
+        foreach (UIMainPage page in openPages)
+            page.RefreshPageDimensions();
     }
     
-    [SerializeField] private List<GameObject> prefabEntries;
+    public List<GameObject> prefabEntries;
     private Dictionary<string, GameObject> uiPrefabDictionary;
     
     private Navbar navbar;
@@ -92,7 +95,7 @@ public class JSONToUIManager : MonoBehaviour
 
         if (!uiPrefabDictionary.ContainsKey(loadedData.prefabID))
         {
-            Debug.LogWarning("First child ID not present anymore, aborting build and loading default template");
+            Debug.LogWarning("First child ID not present anymore, aborting build and loading default template: " + loadedData.prefabID);
             LoadDefaultTemplate();
             return;
         }
@@ -123,7 +126,7 @@ public class JSONToUIManager : MonoBehaviour
     
     private UIElementData GenerateDataFromUI(UIElementBase uiElement)
     {
-        UIElementData data = uiElement.SetupGenerateData();
+        UIElementData data = uiElement.GenerateData();
         data.children = new List<UIElementData>();
         
         foreach (Transform child in uiElement.GetSpawnRoot())
@@ -135,13 +138,22 @@ public class JSONToUIManager : MonoBehaviour
     
     private void Spawn(UIElementData data, Transform parent)
     {
-        GameObject prefab = uiPrefabDictionary[data.prefabID];
+        if (!uiPrefabDictionary.TryGetValue(data.prefabID, out GameObject prefab))
+        {
+            Debug.LogWarning("A child's ID does not exist in the dictionary, aborting it's build: " + data.prefabID);
+            return;
+        }
+
         GameObject instance = Instantiate(prefab, parent);
 
         UIElementBase element = instance.GetComponent<UIElementBase>();
-        element.SetupApplyData(data);
+        element.ApplyGeneralData(data);
         
-        foreach (var child in data.children)
-            Spawn(child, element.GetSpawnRoot());
+        foreach (Transform child in element.GetSpawnRoot())
+            if (child.TryGetComponent(out UIElementBase _))
+                Destroy(child.gameObject);
+        
+        foreach (var child1 in data.children)
+            Spawn(child1, element.GetSpawnRoot());
     }
 }

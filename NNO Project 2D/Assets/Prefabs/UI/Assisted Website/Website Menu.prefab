@@ -551,10 +551,10 @@ RectTransform:
   - {fileID: 4452331401409513500}
   m_Father: {fileID: 5683099005984594633}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -992}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3838744177220201189
 GameObject:
@@ -1295,16 +1295,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JSONToUIManager
   isDeveloper: 1
-  developerButton: {fileID: 678005916849043916, guid: 78a3dcb079de91b419bd155d1cbe5518, type: 3}
+  developerButton: {fileID: 965972739612800970}
   defaultTemplate: {fileID: 4842728977131140013, guid: e39552d2955cd6a4d9a5acb37ea0e4cf, type: 3}
   pagesHolder: {fileID: 6494376989354221189}
   prefabEntries:
+  - {fileID: 2755658612724220491, guid: 86cc201e933760e4bb281368b945ce9c, type: 3}
   - {fileID: 2755658612724220491, guid: b149feb676da1ee4daa52f4250c4ec96, type: 3}
-  - {fileID: 3388930711789833108, guid: 2de8a83bf9d129d4797da5945b299692, type: 3}
-  - {fileID: 3920000666565253866, guid: 184ec42c445d7c04692f1aa040ac58ad, type: 3}
-  - {fileID: 4665740726310673787, guid: 571090be909865240a4a2743f29b169d, type: 3}
+  - {fileID: 2755658612724220491, guid: 9edbb8351b0264144b73708df74f6faa, type: 3}
+  - {fileID: 2755658612724220491, guid: 659f6952f9080264b8e9a4a2126a08d9, type: 3}
   - {fileID: 4372028133558278669, guid: d2ed82d34fab7e5498c1bbcc586d597d, type: 3}
+  - {fileID: 3920000666565253866, guid: 184ec42c445d7c04692f1aa040ac58ad, type: 3}
+  - {fileID: 2755658612724220491, guid: b587921eb8b264a4799a34bbdb5218e0, type: 3}
+  - {fileID: 3388930711789833108, guid: 2de8a83bf9d129d4797da5945b299692, type: 3}
+  - {fileID: 4665740726310673787, guid: 571090be909865240a4a2743f29b169d, type: 3}
   - {fileID: 2755658612724220491, guid: 467fde74d337b804baa42c3ae6077605, type: 3}
+  - {fileID: 4520782566025115875, guid: 31bd6b4736421764897487b95984afcb, type: 3}
 --- !u!1001 &7692523619524910451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1313,6 +1318,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5683099005984594633}
     m_Modifications:
+    - target: {fileID: 1865696624440018834, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865696624440018834, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865696624440018834, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865696624440018834, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108618852609902500, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1396,6 +1417,22 @@ PrefabInstance:
     - target: {fileID: 3662448973465602136, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
       propertyPath: m_Name
       value: Navbar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056124578697632197, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056124578697632197, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056124578697632197, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056124578697632197, guid: f61b6a83f9a6a4f41aa856e56afd3ebb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

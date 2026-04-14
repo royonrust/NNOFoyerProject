@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: ce38430670973e646ba7154913ca6eab
+guid: 9116c817c195a574d847f2676469ee28
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8793950867879015768
-    second: NNO facebook post man picture_0
+      213: -6893308443034365055
+    second: text_0
+  - first:
+      213: 3758864503456084200
+    second: text_1
+  - first:
+      213: 2353359508387441526
+    second: text_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NNO facebook post man picture_0
+      name: text_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1365
-        height: 1365
+        x: 167
+        y: 301
+        width: 180
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +173,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 855ba24d8b36a0a70800000000000000
-      internalID: 8793950867879015768
+      spriteID: 1835cbd4e7c0650a0800000000000000
+      internalID: -6893308443034365055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: text_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 231
+        width: 464
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e0335fb95b2a2430800000000000000
+      internalID: 3758864503456084200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: text_2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 24
+        width: 180
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ba8361100d8a020800000000000000
+      internalID: 2353359508387441526
       vertices: []
       indices: 
       edges: []
@@ -187,7 +237,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      NNO facebook post man picture_0: 8793950867879015768
+      text_0: -6893308443034365055
+      text_1: 3758864503456084200
+      text_2: 2353359508387441526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

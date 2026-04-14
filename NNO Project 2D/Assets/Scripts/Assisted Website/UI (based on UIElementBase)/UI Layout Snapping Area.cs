@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+[ExecuteAlways]
 public class UILayoutSnappingArea : UIElementBase, IDropHandler
 {
     private RectTransform rect;
@@ -23,7 +24,7 @@ public class UILayoutSnappingArea : UIElementBase, IDropHandler
         };
     }
 
-    public override void ApplyData(UIElementData baseData)
+    public override void ApplyCustomData(UIElementData baseData)
     {
         var d = (UILayoutSnappingAreaData)baseData;
         
@@ -40,6 +41,8 @@ public class UILayoutSnappingArea : UIElementBase, IDropHandler
         if (dropped.TryGetComponent(out DraggableUIElement element)) 
             element.parentAfterDrag = transform;
     }
+
+    private void OnEnable() => Start();
 
     public void SetGridCellSize()
     {

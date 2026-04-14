@@ -12,7 +12,7 @@ public class UIGenericElement : UIElementBase
         };
     }
 
-    public override void ApplyData(UIElementData baseData)
+    public override void ApplyCustomData(UIElementData baseData)
     {
     }
 }
