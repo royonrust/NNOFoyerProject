@@ -296,6 +296,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UINewsArticleGridEntry
   id: News Article
   contentRoot: {fileID: 8619611888320844260}
+  namedSpawnRoots:
+  - identifier: Title Section
+    root: {fileID: 1670476677416096483}
+  - identifier: Description Section
+    root: {fileID: 1939633765160039315}
+  - identifier: Image Section
+    root: {fileID: 8619611888320844260}
   titleTMP: {fileID: 0}
   descriptionTMP: {fileID: 0}
 --- !u!1 &5766802468716735267
@@ -481,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7371462105875552396, guid: 2de8a83bf9d129d4797da5945b299692, type: 3}
       propertyPath: m_fontSize
-      value: 32
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7371462105875552396, guid: 2de8a83bf9d129d4797da5945b299692, type: 3}
       propertyPath: m_fontSizeMax
@@ -603,7 +610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7371462105875552396, guid: 2de8a83bf9d129d4797da5945b299692, type: 3}
       propertyPath: m_fontSize
-      value: 40
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7371462105875552396, guid: 2de8a83bf9d129d4797da5945b299692, type: 3}
       propertyPath: m_fontStyle
@@ -801,11 +808,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5803391085549330969, guid: 184ec42c445d7c04692f1aa040ac58ad, type: 3}
       propertyPath: m_CellSize.x
-      value: 1106.5
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 5803391085549330969, guid: 184ec42c445d7c04692f1aa040ac58ad, type: 3}
       propertyPath: m_CellSize.y
-      value: 135
+      value: -665
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -914,11 +921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5803391085549330969, guid: 184ec42c445d7c04692f1aa040ac58ad, type: 3}
       propertyPath: m_CellSize.x
-      value: 1106.5
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 5803391085549330969, guid: 184ec42c445d7c04692f1aa040ac58ad, type: 3}
       propertyPath: m_CellSize.y
-      value: 45
+      value: -755
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

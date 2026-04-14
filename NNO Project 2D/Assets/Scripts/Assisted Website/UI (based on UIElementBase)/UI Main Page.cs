@@ -10,13 +10,14 @@ public class UIMainPage : UIElementBase
     
     public override UIElementData GenerateData()
     {
-        return new UIMainPageData
+        var d = new UIMainPageData
         {
-            prefabID = prefabID,
-            anchoredPosition = ((RectTransform)transform).anchoredPosition,
             type = pageType,
             hiddenPage = isHidden
         };
+        
+        PopulateIDAndRectData(d);
+        return d;
     }
 
     public override void ApplyCustomData(UIElementData baseData)

@@ -5,11 +5,10 @@ public class UIGenericElement : UIElementBase
 {
     public override UIElementData GenerateData()
     {
-        return new UIGenericElementData
-        {
-            prefabID = prefabID,
-            anchoredPosition = ((RectTransform)transform).anchoredPosition
-        };
+        var d = new UIGenericElementData();
+        
+        PopulateIDAndRectData(d);
+        return d;
     }
 
     public override void ApplyCustomData(UIElementData baseData)
@@ -20,4 +19,5 @@ public class UIGenericElement : UIElementBase
 [Serializable]
 public class UIGenericElementData : UIElementData
 {
+    
 }

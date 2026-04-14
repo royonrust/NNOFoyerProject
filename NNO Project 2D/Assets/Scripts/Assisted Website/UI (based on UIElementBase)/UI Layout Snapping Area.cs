@@ -16,12 +16,14 @@ public class UILayoutSnappingArea : UIElementBase, IDropHandler
     
     public override UIElementData GenerateData()
     {
-        return new UILayoutSnappingAreaData
+        rect ??= GetComponent<RectTransform>();
+        
+        var d = new UILayoutSnappingAreaData
         {
-            prefabID = prefabID,
-            anchoredPosition = ((RectTransform)transform).anchoredPosition,
             rectSize = rect.rect.size
         };
+        PopulateIDAndRectData(d);
+        return d;
     }
 
     public override void ApplyCustomData(UIElementData baseData)

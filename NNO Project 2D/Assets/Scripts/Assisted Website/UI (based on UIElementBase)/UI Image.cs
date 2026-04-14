@@ -10,12 +10,12 @@ public class UIImage : DraggableUIElement
 
     public override UIElementData GenerateData()
     {
-        return new UIImageData
+        var d = new UIImageData
         {
-            prefabID = prefabID,
-            anchoredPosition = ((RectTransform)transform).anchoredPosition,
             spriteName = image.sprite != null ? image.sprite.name : string.Empty
         };
+        PopulateIDAndRectData(d);
+        return d;
     }
 
     public override void ApplyCustomData(UIElementData baseData)

@@ -9,13 +9,10 @@ public class UINewsArticleGridEntry : UIElementBase
     
     public override UIElementData GenerateData()
     {
-        return new UINewsArticleData
-        {
-            prefabID = prefabID,
-            anchoredPosition = ((RectTransform)transform).anchoredPosition,
-            // title = titleTMP.text,
-            // description = descriptionTMP.text
-        };
+        var d = new UINewsArticleData() { };
+        
+        PopulateIDAndRectData(d);
+        return d;
     }
 
     public override void ApplyCustomData(UIElementData baseData)

@@ -39,15 +39,8 @@ public class InputFieldFormatter : MonoBehaviour
         fontInputField.text = size.ToString(CultureInfo.CurrentCulture);
     }
 
-    public void ApplyFontStyle(FontStyles style)
-    {
-        text.fontStyle = style;
-    }
-
-    public void ApplyAlignment(TextAlignmentOptions alignment)
-    {
-        text.alignment = alignment;
-    }
+    public void ApplyFontStyle(FontStyles style) => text.fontStyle = style;
+    public void ApplyAlignment(TextAlignmentOptions alignment) => text.alignment = alignment;
 
     public void AlignLeft() => SetHorizontalAlignment(HorizontalAlignmentOptions.Left);
     public void AlignCenter() => SetHorizontalAlignment(HorizontalAlignmentOptions.Center);
@@ -57,15 +50,8 @@ public class InputFieldFormatter : MonoBehaviour
     public void AlignMiddle() => SetVerticalAlignment(VerticalAlignmentOptions.Middle);
     public void AlignBottom() => SetVerticalAlignment(VerticalAlignmentOptions.Bottom);
 
-    private void SetHorizontalAlignment(HorizontalAlignmentOptions horizontal)
-    {
-        text.horizontalAlignment = horizontal;
-    }
-
-    private void SetVerticalAlignment(VerticalAlignmentOptions vertical)
-    {
-        text.verticalAlignment = vertical;
-    }
+    private void SetHorizontalAlignment(HorizontalAlignmentOptions horizontal) => text.horizontalAlignment = horizontal;
+    private void SetVerticalAlignment(VerticalAlignmentOptions vertical) => text.verticalAlignment = vertical;
 
     public void DoneEditing()
     {
@@ -73,11 +59,7 @@ public class InputFieldFormatter : MonoBehaviour
         GetComponentInParent<UITextblock>()?.SetTextFromInputField();
     }
     
-    private void OnEnable()
-    {
-        buttons.SetParent(transform.root, true);
-    }
-    
+    private void OnEnable() => buttons.SetParent(transform.root, true);
     private float ClampFontSize(float size) => Mathf.Clamp(size, 6, 144);
 
     private FontStyles ToggleStyle(FontStyles current, FontStyles flag)

@@ -124,36 +124,53 @@ public class JSONToUIManager : MonoBehaviour
         Debug.Log("UI hierarchy saved!");
     }
     
-    private UIElementData GenerateDataFromUI(UIElementBase uiElement)
+    private UIElementData GenerateDataFromUI(UIElementBase uiElement, string spawnRootIdentifier = null)
     {
         UIElementData data = uiElement.GenerateData();
+        data.spawnRootIdentifier = spawnRootIdentifier;
         data.children = new List<UIElementData>();
-        
-        foreach (Transform child in uiElement.GetSpawnRoot())
-            if (child.TryGetComponent<UIElementBase>(out var childUI))
-                data.children.Add(GenerateDataFromUI(childUI));
+
+        // Check named spawn roots first
+        if (uiElement.namedSpawnRoots != null && uiElement.namedSpawnRoots.Count > 0)
+        {
+            foreach (var namedRoot in uiElement.namedSpawnRoots)
+            {
+                foreach (Transform child in namedRoot.root)
+                    if (child.TryGetComponent<UIElementBase>(out var childUI))
+                        data.children.Add(GenerateDataFromUI(childUI, namedRoot.identifier));
+            }
+        }
+        else
+        {
+            foreach (Transform child in uiElement.GetSpawnRoot())
+                if (child.TryGetComponent<UIElementBase>(out var childUI))
+                    data.children.Add(GenerateDataFromUI(childUI));
+        }
 
         return data;
     }
     
-    private void Spawn(UIElementData data, Transform parent)
+    private void Spawn(UIElementData data, Transform parent, UIElementBase parentElement = null)
     {
         if (!uiPrefabDictionary.TryGetValue(data.prefabID, out GameObject prefab))
         {
-            Debug.LogWarning("A child's ID does not exist in the dictionary, aborting it's build: " + data.prefabID);
+            Debug.LogWarning("A child's ID does not exist in the dictionary: " + data.prefabID);
             return;
         }
 
-        GameObject instance = Instantiate(prefab, parent);
+        Transform spawnParent = parent;
+        if (parentElement != null && !string.IsNullOrEmpty(data.spawnRootIdentifier))
+            spawnParent = parentElement.GetSpawnRoot(data.spawnRootIdentifier);
 
+        GameObject instance = Instantiate(prefab, spawnParent);
         UIElementBase element = instance.GetComponent<UIElementBase>();
         element.ApplyGeneralData(data);
         
-        foreach (Transform child in element.GetSpawnRoot())
+        foreach (Transform child in element.GetAllSpawnRoots())
             if (child.TryGetComponent(out UIElementBase _))
                 Destroy(child.gameObject);
-        
-        foreach (var child1 in data.children)
-            Spawn(child1, element.GetSpawnRoot());
+
+        foreach (var child in data.children)
+            Spawn(child, element.GetSpawnRoot(child.spawnRootIdentifier), element);
     }
 }

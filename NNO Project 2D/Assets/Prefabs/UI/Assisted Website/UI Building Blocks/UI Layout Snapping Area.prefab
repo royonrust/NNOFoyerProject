@@ -34,10 +34,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 500}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3262540023672486997
 CanvasRenderer:
@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UILayoutSnappingArea
   id: Layout Snapping Area
   contentRoot: {fileID: 0}
+  namedSpawnRoots: []
 --- !u!114 &5803391085549330969
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,16 +15,18 @@ public class UITextblock : DraggableUIElement
 
     public override UIElementData GenerateData()
     {
-        return new UITextblockData
+        tmp ??= GetComponentInChildren<TextMeshProUGUI>();
+        
+        var d = new UITextblockData
         {
-            prefabID = prefabID,
-            anchoredPosition = ((RectTransform)transform).anchoredPosition,
             text = tmp.text,
             draggable = draggable,
             fontSize = tmp.fontSizeMax,
             fontStyle = tmp.fontStyle,
             alignment = tmp.alignment
         };
+        PopulateIDAndRectData(d);
+        return d;
     }
 
     public override void ApplyCustomData(UIElementData baseData)
