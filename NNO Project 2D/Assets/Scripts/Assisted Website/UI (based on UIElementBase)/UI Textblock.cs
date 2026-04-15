@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,7 +16,8 @@ public class UITextblock : DraggableUIElement
         {
             prefabID = prefabID,
             anchoredPosition = ((RectTransform)transform).anchoredPosition,
-            text = tmp.text
+            text = tmp.text,
+            children = new List<UIElementData>()
         };
     }
 

@@ -92,6 +92,7 @@ public class Navbar : MonoBehaviour
 
     public void AddPage(PageType page)
     {
+
         var newPage = Instantiate(pageUIElement, holder.transform);
         var pageScript = newPage.GetComponent<UIMainPage>();
 

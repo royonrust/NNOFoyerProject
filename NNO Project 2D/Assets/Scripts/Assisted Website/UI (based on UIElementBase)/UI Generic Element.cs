@@ -1,14 +1,16 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UIGenericElement : UIElementBase
 {
     public override UIElementData GenerateData()
     {
-        return new UIGenericElementData
+        return new UIElementData
         {
             prefabID = prefabID,
-            anchoredPosition = ((RectTransform)transform).anchoredPosition
+            anchoredPosition = ((RectTransform)transform).anchoredPosition,
+            children = new List<UIElementData>()
         };
     }
 

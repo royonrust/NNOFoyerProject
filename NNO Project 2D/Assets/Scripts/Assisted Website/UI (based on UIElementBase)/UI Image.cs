@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -13,7 +14,8 @@ public class UIImage : DraggableUIElement
         {
             prefabID = prefabID,
             anchoredPosition = ((RectTransform)transform).anchoredPosition,
-            sprite = image.sprite
+            sprite = image.sprite,
+            children = new List<UIElementData>()
         };
     }
 

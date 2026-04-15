@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "469370447526",
+    "firebase_url": "https://nnotest-e40e2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "nnotest-e40e2",
+    "storage_bucket": "nnotest-e40e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469370447526:android:58dd80b55f3f0b814b3667",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.NNOProject2D"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABNlnrhrRCXfWe-Svi5uhmmNGQWDQzN1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
