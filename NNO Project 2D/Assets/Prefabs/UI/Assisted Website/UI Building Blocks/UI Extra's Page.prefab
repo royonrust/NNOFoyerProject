@@ -52,7 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIPagePrefab
   id: Extra Page
   contentRoot: {fileID: 1158470447247220051}
-  pageType: 4
+  namedSpawnRoots: []
+  pageType: 5
   isHidden: 0
 --- !u!1 &7105728318925626653
 GameObject:

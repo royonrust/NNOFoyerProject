@@ -20,7 +20,7 @@ public class GridLayoutGroupController : MonoBehaviour
         float totalWidth = rect.rect.width;
         float spacing = layout.spacing.x;
         float padding = layout.padding.horizontal;
-        float cellWidth = (totalWidth - spacing - padding) / horizontalCellAmount;
+        float cellWidth = (totalWidth - spacing - padding - 30f) / horizontalCellAmount;
 
         layout.cellSize = new Vector2(cellWidth, layout.cellSize.y);
     }

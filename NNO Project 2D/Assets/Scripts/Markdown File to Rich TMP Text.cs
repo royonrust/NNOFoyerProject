@@ -7,6 +7,8 @@ public class MarkdownFileToRichTMPText : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI tmp;
     [SerializeField] private TextAsset markdownFile;
+    [SerializeField] private TextAsset markdownFileEN;
+    [SerializeField] private bool isEnglish;
     [Header("Font Sizes")] 
     [SerializeField] private int titleFS = 102;
     [SerializeField] private int subtitleFS = 90;
@@ -15,6 +17,9 @@ public class MarkdownFileToRichTMPText : MonoBehaviour
     [SerializeField] private int sectionFS = 60;
     [SerializeField] private int subsectionFS = 54;
     [SerializeField] private int bodyFS = 48;
+
+    [SerializeField] private GameObject englishButton;
+    [SerializeField] private GameObject dutchButton;
     
     private string[] lines;
     
@@ -24,7 +29,9 @@ public class MarkdownFileToRichTMPText : MonoBehaviour
     {
         StringBuilder builder = new StringBuilder();
 
-        string raw = markdownFile.text;
+        string raw;
+        if (isEnglish) raw = markdownFileEN.text;
+        else raw = markdownFile.text;
 
         raw = raw.Replace("\r\n", "\n").Replace("\r", "\n");
         raw = raw.Trim();
@@ -54,6 +61,14 @@ public class MarkdownFileToRichTMPText : MonoBehaviour
 
         tmp.maxVisibleCharacters = builder.Length + 100;    //100 buffer
         tmp.text = builder.ToString();
+    }
+
+    public void SwapEnglish()
+    {
+        isEnglish = !isEnglish;
+        dutchButton.SetActive(isEnglish);
+        englishButton.SetActive(!isEnglish);
+        GenerateText();
     }
     
     private void AppendFormattedLine(StringBuilder builder, string line)

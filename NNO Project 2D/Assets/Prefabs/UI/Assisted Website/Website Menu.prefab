@@ -532,7 +532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3109938760187704764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1294,22 +1294,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a413009c65e4f3c4f9347aa445c56d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JSONToUIManager
-  isDeveloper: 1
+  isDeveloper: 0
   developerButton: {fileID: 965972739612800970}
   defaultTemplate: {fileID: 4842728977131140013, guid: e39552d2955cd6a4d9a5acb37ea0e4cf, type: 3}
   pagesHolder: {fileID: 6494376989354221189}
   prefabEntries:
   - {fileID: 2755658612724220491, guid: 86cc201e933760e4bb281368b945ce9c, type: 3}
+  - {fileID: 2755658612724220491, guid: a0df9ddcf84affa4684882aa7f314b29, type: 3}
   - {fileID: 2755658612724220491, guid: b149feb676da1ee4daa52f4250c4ec96, type: 3}
   - {fileID: 2755658612724220491, guid: 9edbb8351b0264144b73708df74f6faa, type: 3}
   - {fileID: 2755658612724220491, guid: 659f6952f9080264b8e9a4a2126a08d9, type: 3}
   - {fileID: 4372028133558278669, guid: d2ed82d34fab7e5498c1bbcc586d597d, type: 3}
   - {fileID: 3920000666565253866, guid: 184ec42c445d7c04692f1aa040ac58ad, type: 3}
+  - {fileID: 4520782566025115875, guid: 31bd6b4736421764897487b95984afcb, type: 3}
   - {fileID: 2755658612724220491, guid: b587921eb8b264a4799a34bbdb5218e0, type: 3}
   - {fileID: 3388930711789833108, guid: 2de8a83bf9d129d4797da5945b299692, type: 3}
   - {fileID: 4665740726310673787, guid: 571090be909865240a4a2743f29b169d, type: 3}
   - {fileID: 2755658612724220491, guid: 467fde74d337b804baa42c3ae6077605, type: 3}
-  - {fileID: 4520782566025115875, guid: 31bd6b4736421764897487b95984afcb, type: 3}
 --- !u!1001 &7692523619524910451
 PrefabInstance:
   m_ObjectHideFlags: 0

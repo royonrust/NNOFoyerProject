@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UILayoutSnappingArea : UIElementBase, IDropHandler
 {
     private RectTransform rect;
+    private GridLayoutGroup grid;
     
     private void Start()
     {
@@ -46,9 +47,11 @@ public class UILayoutSnappingArea : UIElementBase, IDropHandler
 
     private void OnEnable() => Start();
 
+    private void Update() => SetGridCellSize();
+
     public void SetGridCellSize()
     {
-        GridLayoutGroup grid = GetComponent<GridLayoutGroup>();
+        grid ??= GetComponent<GridLayoutGroup>();
         grid.cellSize = rect.rect.size;
     }
 }

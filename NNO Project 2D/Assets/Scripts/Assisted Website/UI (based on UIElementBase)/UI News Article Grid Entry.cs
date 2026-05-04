@@ -29,5 +29,4 @@ public class UINewsArticleData: UIElementData
 {
     public string title;
     public string description;
-    
 }

@@ -1,5 +1,171 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1612179188031421245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5960999328095952818}
+  - component: {fileID: 816843681427041092}
+  - component: {fileID: 222807563304509523}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5960999328095952818
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612179188031421245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1158470447247220051}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1400, y: 2300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &816843681427041092
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612179188031421245}
+  m_CullTransparentMesh: 1
+--- !u!114 &222807563304509523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612179188031421245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "<b>What is the NNO?</b>\r\nNNO stands for Noord Nederlands Concert. Despite
+    being the orchestra of the North, we tour very regularly to other venues around
+    the country, such as the Concertgebouw in Amsterdam, Tivoli Vredenburg in Utrecht
+    and the Lowlands Festival. We can also be heard on radio, TV and (live)streams.
+    \n\nIn recent years, many young talented musicians have been recruited. The NNO
+    consists of around 70 musicians with 14 different nationalities, who together
+    perform symphonic music at more than 100 concerts per season.\r\nYou'll find
+    us in concert halls, outdoor venues, at festivals and school performances. For
+    example, during the Pieter Roelf Youth Concerts where we introduce thousands
+    of primary school pupils to classical music.\r\nThe NNO works closely with various
+    other arts institutions, the Prince Claus Conservatoire in Groningen, the conservatoires
+    in Amsterdam and The Hague, and the Nederlandse Reisopera.\r\n\r\n<b>Noord Nederlands
+    Concert Choir</b>\r\nThe choir consists of a selection of the best amateur singers
+    from the North of the Netherlands and performs choral works, often with a large
+    ensemble and a higher level of difficulty. The NNCK is a project choir that performs
+    exclusively alongside the NNO, a professional Dutch symphony orchestra.\r\nThe
+    programming, artistic direction and quality standards that each singer must meet
+    are determined by the NNO. Rehearsals and performances take place on a project
+    basis. Think of the Matth\xE4us Passion in virtually all major concert halls
+    in the North, as well as a performance at the Lowlands festival in Biddinghuizen.\r\n\r\n<i>For
+    more than 30 years the permanent choir of the Noord Nederlands Orchestra</i>\r\nThe
+    NNCK was founded in 1991 by the NNO out of a need for a strong choir of its own.
+    This makes the NNO unique within the Dutch orchestra landscape. The NNCK performs
+    exclusively in symphonic works for choir and orchestra by the NNO, three to four
+    times per season. The choir numbers around one hundred vocalists, selected from
+    the finest choral singers in the North.\r\n\r\n<b>The people behind the scenes</b>\r\nHundreds
+    of people work at the NNO, spread across many different roles. We have dozens
+    to nearly a hundred people performing in the orchestras themselves \u2014 whether
+    it's the violinist at the front or the saxophone at the back. In addition, the
+    NNO has 5 top conductors who effectively lead the entire orchestra."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 42
+  m_fontSizeBase: 42
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2755658612724220491
 GameObject:
   m_ObjectHideFlags: 0
@@ -52,7 +218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIPagePrefab
   id: About Page
   contentRoot: {fileID: 1158470447247220051}
-  pageType: 3
+  namedSpawnRoots: []
+  pageType: 4
   isHidden: 0
 --- !u!1 &7105728318925626653
 GameObject:
@@ -157,7 +324,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5960999328095952818}
   m_Father: {fileID: 3751830695348576091}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -180,8 +348,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Top: 150
+    m_Bottom: 500
   m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 1

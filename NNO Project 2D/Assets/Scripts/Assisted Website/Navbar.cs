@@ -92,6 +92,7 @@ public class Navbar : MonoBehaviour
                 child.gameObject.SetActive(false);
         
         targetPage.gameObject.SetActive(true);
+        
         currentlyOpenedPage = page;
         
         RefreshNavbarButtons();
@@ -154,6 +155,8 @@ public class Navbar : MonoBehaviour
         {
             case PageType.home:
                 return "Home";
+            case PageType.agenda:
+                return "Agenda";
             case PageType.news:
                 return "News";
             case PageType.about:
@@ -170,6 +173,7 @@ public enum PageType
 {
     empty, 
     home,
+    agenda,
     news,
     about,
     extra
