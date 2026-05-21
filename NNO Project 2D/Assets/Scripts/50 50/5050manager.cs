@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -15,11 +16,14 @@ public class fiftyFiftyManager : MonoBehaviour
 
     private int streak;
     [SerializeField] private TextMeshProUGUI streakCounter;
+    [SerializeField] private TextMeshProUGUI bestStreakCounter;
+    private StreakSave bestStreak;
 
     [SerializeField] private GameObject nextQuestionButton;
 
     private void Start()
     {
+        streak = 0;
         SpawnNewStatements();
         SetStreaKCounter();
     }
@@ -95,23 +99,44 @@ public class fiftyFiftyManager : MonoBehaviour
     {
         if (streak < 1) streakCounter.text = "";
         else streakCounter.text = $"Streak: {streak}";
+        
+        CheckBest();
     }
-}
 
-[CreateAssetMenu(fileName = "NewStatementPair", menuName = "FiftyFifty/StatementPair")]
-public class StatementPair : ScriptableObject
-{
-    [Space(20)]
-    public Statement correctStatement;
-    [Space(40)]
-    public Statement falseStatement;
+    private void CheckBest()
+    {
+        string path = Application.persistentDataPath + "/bestStreak.json";
+        if (bestStreak == null)
+            bestStreak = new();
+
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            bestStreak = JsonUtility.FromJson<StreakSave>(json);
+        }
+        
+        if (bestStreak.date != DateTime.Now.ToString("yyyy-MM-dd") ||
+            bestStreak.streak < streak)
+            SaveBest();
+        
+        UpdateBestText();
+    }
+
+    private void SaveBest()
+    {
+        bestStreak.date = DateTime.Now.ToString("yyyy-MM-dd");
+        bestStreak.streak = streak;
+
+        string json = JsonUtility.ToJson(bestStreak);
+        File.WriteAllText(Application.persistentDataPath + "/bestStreak.json", json);
+    }
+
+    private void UpdateBestText() => bestStreakCounter.text = "Best Today: " + bestStreak.streak;
 }
 
 [Serializable]
-public class Statement
+public class StreakSave
 {
-    [TextArea(1, 1)] public string title;
-    [TextArea(1, 3)] public string description;
-    [Space]
-    [TextArea(3, 15)] public string explanation;
+    public string date;
+    public int streak;
 }
