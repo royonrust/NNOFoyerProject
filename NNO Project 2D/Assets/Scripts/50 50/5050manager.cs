@@ -20,6 +20,9 @@ public class fiftyFiftyManager : MonoBehaviour
     private StreakSave bestStreak;
 
     [SerializeField] private GameObject nextQuestionButton;
+    [SerializeField] private ParticleController particlesForeground;
+    [SerializeField] private ParticleController particlesMiddleground;
+    [SerializeField] private ParticleController particlesBackground;
 
     private void Start()
     {
@@ -87,6 +90,8 @@ public class fiftyFiftyManager : MonoBehaviour
     {
         if (wasCorrect) streak++;
         else streak = 0;
+        
+        OnQuestionAnswer(wasCorrect);
 
         SetStreaKCounter();
         nextQuestionButton.SetActive(true);
@@ -132,6 +137,24 @@ public class fiftyFiftyManager : MonoBehaviour
     }
 
     private void UpdateBestText() => bestStreakCounter.text = "Best Today: " + bestStreak.streak;
+
+    private void OnQuestionAnswer(bool wasCorrect)
+    {
+        particlesBackground.ChangeBasedOnStreak(streak, wasCorrect);
+        particlesMiddleground.ChangeBasedOnStreak(streak - 1, wasCorrect);
+        particlesForeground.ChangeBasedOnStreak(streak - 3, wasCorrect);
+
+        if (secondScreenStreakCounter != null)
+        {
+            secondScreenStreakCounter.fontSize = 75f + streak * 10f;
+            var c = secondScreenStreakCounter.color;
+            c.a = .50f + streak * .05f;
+            secondScreenStreakCounter.color = c;
+            secondScreenStreakCounter.text = "Streak: " + streak;
+        }
+    }
+
+    public TextMeshProUGUI secondScreenStreakCounter;
 }
 
 [Serializable]
