@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{adee37af-e23e-42e7-9e3f-caf62e290503}">
+		<property name="assetPath">
+			<value>The Moonlit Woods of Fairyland - Hoorn.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>317.29166666666669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6e90a1e4-7ae3-4fc8-9409-1fbcf2c9d5a6}</destination>
+		</relationship>
+	</object>
+</objects>

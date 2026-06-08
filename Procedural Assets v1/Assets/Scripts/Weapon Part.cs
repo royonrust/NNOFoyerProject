@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class WeaponPart : MonoBehaviour
 {
-    [Header("Part Stats")]
+    [Header("Stats")]
     public WeaponPartStats stats = new WeaponPartStats();
- 
-    [Header("Attachment Points")]
-    [Tooltip("Where the PREVIOUS part in the chain connects to this one (e.g. where a blade receives a guard).")]
+    
+    [Header("Model & Material")]
+    public GameObject sourceFBX;
+    public Material partMaterial;
+    
     public Transform attachBack;
-    [Space]
- 
-    [Tooltip("Where the NEXT part in the chain connects (e.g. where a blade connects to a tip).")]
     public Transform attachFront;
+    
+    public Vector3 attachFrontLocalPos;
+    public Vector3 attachBackLocalPos;
 }

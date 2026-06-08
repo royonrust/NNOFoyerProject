@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{6582d9de-5ba8-4fff-addf-6126bdedbf10}">
+		<property name="name">
+			<value>Vol Hout</value>
+		</property>
+		<relationship name="folder">
+			<destination>{524fed5d-5260-4024-b300-de16210f753b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a87fa953-4175-4f98-8472-f3e9e1ad571f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a87fa953-4175-4f98-8472-f3e9e1ad571f}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

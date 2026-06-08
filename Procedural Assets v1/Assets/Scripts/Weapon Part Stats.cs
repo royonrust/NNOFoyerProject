@@ -4,17 +4,16 @@ using UnityEngine;
 public class WeaponPartStats
 {
     [Header("Identity")] 
-    public string partName = "New Part";
+    public string weaponPartName = "New Part";
     public WeaponType weaponType;
     public WeaponPartType WeaponPartType;
-    
-    [Header("Rarity")]
     public WeaponPartRarity WeaponPartRarity = WeaponPartRarity.Common;
 }
 
 [System.Serializable]
 public enum WeaponType
 {
+    None,
     Swords,
     Daggers,
     Polearms,
@@ -26,10 +25,9 @@ public enum WeaponType
 public enum WeaponPartType
 {
     Handle,
-    HandleMaterial,
     Pummel,
     Pendant,
-    HandleGuard,
+    Guard,
     Blade
 }
 

@@ -1,0 +1,1 @@
+using UnityEngine; using UnityEngine.SceneManagement; public class OpenScene : MonoBehaviour { public string targetScene; public void GoToScene() => SceneManager.LoadScene(targetScene); }

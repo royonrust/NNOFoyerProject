@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{849f3d48-583a-4418-b2a5-ffdc55a89c21}">
+		<property name="name">
+			<value>Vol Slagwerk</value>
+		</property>
+		<relationship name="folder">
+			<destination>{524fed5d-5260-4024-b300-de16210f753b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6bd1ab3e-9193-4ef5-8c1b-a69f6dbe5f1f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6bd1ab3e-9193-4ef5-8c1b-a69f6dbe5f1f}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

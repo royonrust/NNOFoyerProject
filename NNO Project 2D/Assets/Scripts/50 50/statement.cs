@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class StatementUI : MonoBehaviour
 {
-    private fiftyFiftyManager manager;
+    private FiftyFiftyManager manager;
     
     [HideInInspector] public Statement statement;
     [HideInInspector] public bool isCorrect;
@@ -17,7 +17,7 @@ public class StatementUI : MonoBehaviour
     [SerializeField] private GameObject incorrectVisual;
     [SerializeField] private TextMeshProUGUI explanationTMP;
 
-    public void Awake() => manager = GetComponentInParent<fiftyFiftyManager>();
+    public void Awake() => manager = GetComponentInParent<FiftyFiftyManager>();
 
     public void Populate()
     {
@@ -25,15 +25,5 @@ public class StatementUI : MonoBehaviour
         descriptionTMP.text = statement.description;
     }
 
-    public void ClickButton() => manager.ShowExplanations(isCorrect);
-
-    public void ShowExplanation()
-    {
-        GetComponent<Button>().enabled = false;
-        explanationWindow.SetActive(true);
-        explanationTMP.text = statement.explanation;
-        
-        correctVisual.SetActive(isCorrect);
-        incorrectVisual.SetActive(!isCorrect);
-    }
+    //public void ClickButton() => manager.ShowExplanation(isCorrect);
 }

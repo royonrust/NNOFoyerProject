@@ -1,35 +1,50 @@
 using UnityEngine;
-using FMOD;
 using FMODUnity;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
+[RequireComponent(typeof(Slider))] [RequireComponent(typeof(StudioEventEmitter))]
 public class Slider1 : MonoBehaviour
 {
+    private StudioEventEmitter studioEventEmitter;
+    private Slider slider;
+    private string parameter;
+    private CanvasGroup sectionCanvasGroup;
+    private TextMeshProUGUI percentageText;
 
-    public FMOD.Studio.EventInstance EventInstance;
-    public StudioEventEmitter StudioEventEmitter;
-    public string Parameter;
-    public UnityEngine.UI.Slider slider;
-
-    public RawImage sliderImage;
-
-
-    void Start()
+    private void Start()
     {
-        StudioEventEmitter.SetParameter(Parameter, slider.value);
-
+        slider = GetComponent<Slider>();
+        studioEventEmitter = GetComponent<StudioEventEmitter>();
+        parameter = studioEventEmitter.Params[0].Name;
+        percentageText = GetComponentInChildren<TextMeshProUGUI>(true);
         
+        GameObject sectionObject = GameObject.Find("Section Visual " + gameObject.name.Replace("Slider ", ""));
+        
+        if (sectionObject == null)
+        {
+            Debug.LogWarning(
+                $"No orchestra canvas group found for: {gameObject.name} \n" + 
+                $"Please check object names to ensure the below pattern is being followed! \n \n" +
+                $"Slider object name: Slider XX \n" +
+                $"Section object name: Section Visual XX \n");
+        } 
+        else sectionCanvasGroup = sectionObject.GetComponent<CanvasGroup>();
+        
+        studioEventEmitter.SetParameter(parameter, slider.value);
+        ChangePercentageText();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnSliderValueChanged()
     {
-       StudioEventEmitter.SetParameter(Parameter, slider.value);
+        studioEventEmitter.SetParameter(parameter, slider.value);
+        ChangePercentageText();
 
-        Color currentcolor = sliderImage.color;
+        if (sectionCanvasGroup == null)
+            return;
 
-        sliderImage.color = new Color(currentcolor.r, currentcolor.g, currentcolor.b, slider.value);
+        sectionCanvasGroup.alpha = Mathf.Pow(slider.value / 100f, 2.5f);
     }
+
+    private void ChangePercentageText() => percentageText.text = $"{slider.value}%";
 }

@@ -1,0 +1,254 @@
+{
+  "statements": [
+    {
+      "question": "All By Myself van Eric Carmen gebruikt een melodie uit een pianostuk van Sergei Rachmaninoff.",
+      "isTrue": true,
+      "explanation": "Dit klopt. Eric Carmen leende de melodie rechtstreeks van Rachmaninoffs Pianoconcerto nr. 2, wat een van de bekendste voorbeelden is van klassieke muziek die voortleeft in popmuziek."
+    },
+    {
+      "question": "Coldplay, Beyoncé en Lady Gaga gebruiken nooit orkesten of klassieke invloeden in hun muziek.",
+      "isTrue": false,
+      "explanation": "Het tegendeel is waar. Alle drie de artiesten hebben regelmatig orkesten of klassieke elementen verwerkt in hun optredens en opnames."
+    },
+    {
+      "question": "Richard Strauss' Also sprach Zarathustra werd gebruikt in de film 2001: A Space Odyssey.",
+      "isTrue": true,
+      "explanation": "Klopt helemaal. De openingsminuten van de film met dit stuk zijn een van de bekendste combinaties van klassieke muziek en cinema ooit."
+    },
+    {
+      "question": "Zonder muziek zou een film precies hetzelfde aanvoelen voor het publiek.",
+      "isTrue": false,
+      "explanation": "Muziek is een essentieel onderdeel van filmervaring. Het versterkt emoties in spannende, verdrietige en heroïsche scènes op een manier die beeld alleen niet kan."
+    },
+    {
+      "question": "Het verwerken van een bestaand stuk muziek in een nieuw nummer heet samplen.",
+      "isTrue": true,
+      "explanation": "Correct. Samplen is de gangbare term voor het hergebruiken van bestaande muziekfragmenten in nieuwe nummers, iets wat veel voorkomt in pop, hiphop en elektronische muziek."
+    },
+    {
+      "question": "Beethoven's Für Elise is verwerkt in het nummer I Can van Nas.",
+      "isTrue": true,
+      "explanation": "Klopt. De herkenbare melodie van Für Elise vormt de basis van I Can, wat het een van de bekendste voorbeelden van klassieke samples in hiphop maakt."
+    },
+    {
+      "question": "Samplen van klassieke muziek komt alleen voor in hiphop.",
+      "isTrue": false,
+      "explanation": "Klassieke samples duiken op in meerdere genres, waaronder pop en elektronische muziek. Hiphop is een bekend voorbeeld maar zeker niet het enige."
+    },
+    {
+      "question": "Wetenschappers hebben onderzocht wat klassieke muziek doet met de menselijke hersenen en het lichaam.",
+      "isTrue": true,
+      "explanation": "Correct. Er is uitgebreid onderzoek gedaan naar de effecten van klassieke muziek op emoties, concentratie, stress en fysieke gezondheid."
+    },
+    {
+      "question": "Klassieke muziek wordt in ziekenhuizen en therapiecentra gebruikt om patiënten te helpen.",
+      "isTrue": true,
+      "explanation": "Klopt. Vanwege de bewezen effecten op emoties en het zenuwstelsel wordt klassieke muziek actief ingezet bij de behandeling van trauma, geheugenverlies en neurologische aandoeningen."
+    },
+    {
+      "question": "Klassieke muziek heeft geen enkel bewezen effect op concentratie of stressniveaus.",
+      "isTrue": false,
+      "explanation": "Onderzoek toont juist aan dat klassieke muziek wel degelijk invloed heeft op concentratie en stress, wat een van de redenen is dat het in medische omgevingen wordt gebruikt."
+    },
+    {
+      "question": "Schilders laten zich nooit inspireren door muziek omdat het twee totaal verschillende kunstvormen zijn.",
+      "isTrue": false,
+      "explanation": "Schilders laten zich al eeuwenlang inspireren door de emoties en sfeer van muziek. Beeldende kunst en muziek beïnvloeden elkaar voortdurend."
+    },
+    {
+      "question": "Sommige kunstenaars schilderen terwijl ze naar klassieke muziek luisteren.",
+      "isTrue": true,
+      "explanation": "Correct. Het is een bekende praktijk onder beeldende kunstenaars om muziek te gebruiken als inspiratiebron of sfeermaker tijdens het werken."
+    },
+    {
+      "question": "Klassieke muziek en beeldende kunst hebben niets met elkaar te maken.",
+      "isTrue": false,
+      "explanation": "De twee kunstvormen beïnvloeden elkaar al eeuwen. Net zoals muziek verhalen vertelt zonder woorden, doen kunstenaars dat met kleur en vorm."
+    },
+    {
+      "question": "Elegante concertkleding en theatrale ontwerpen zijn een van de manieren waarop klassieke muziek de modewereld beïnvloedt.",
+      "isTrue": true,
+      "explanation": "Klopt. De sfeer van klassieke concerten, met luxe stoffen en stijlvolle uitstraling, heeft ontwerpers door de jaren heen geïnspireerd bij het maken van collecties."
+    },
+    {
+      "question": "Mode en klassieke muziek staan volledig los van elkaar en hebben nooit iets met elkaar gemeen gehad.",
+      "isTrue": false,
+      "explanation": "Ontwerpers gebruiken de sfeer en esthetiek van klassieke muziek regelmatig als inspiratie, en de verbinding tussen muziek en mode is al lang zichtbaar op podia en in de modewereld."
+    },
+    {
+      "question": "Klassieke muziek en architectuur hebben concepten als ritme, balans en harmonie met elkaar gemeen.",
+      "isTrue": true,
+      "explanation": "Correct. Beide disciplines draaien om structuur en verhoudingen. Muziekstukken worden opgebouwd uit patronen en lagen, net zoals gebouwen worden ontworpen met vormen en balans."
+    },
+    {
+      "question": "De grote symmetrische concertzalen uit de klassieke periode sloten qua ontwerp aan bij de georganiseerde structuur van symfonieën van componisten als Mozart en Beethoven.",
+      "isTrue": true,
+      "explanation": "Klopt. De architectonische logica van die zalen weerspiegelt dezelfde principes van orde en symmetrie die ook in de muziek van die periode centraal staan."
+    },
+    {
+      "question": "Moderne architectuur heeft niets meer te maken met ideeën uit de klassieke muziekperiode.",
+      "isTrue": false,
+      "explanation": "Ideeën als ritme, structuur en harmonie uit de klassieke muziektraditie zijn nog steeds terug te vinden in modern architectuurontwerp."
+    },
+    {
+      "question": "Choreografen gebruiken de dynamiek en emoties van klassieke muziek om bewegingen vorm te geven.",
+      "isTrue": true,
+      "explanation": "Correct. Muziek geeft dansers structuur en gevoel, en klassieke muziek blijft een belangrijke inspiratiebron voor choreografen, ook bij vernieuwende dansstijlen."
+    },
+    {
+      "question": "Klassieke muziek speelt geen rol meer in de moderne danswereld.",
+      "isTrue": false,
+      "explanation": "Ook bij hedendaagse dans blijft klassieke muziek een relevante inspiratiebron. Muziek helpt dansers verhalen en gevoelens uit te drukken op een manier die puur beweging niet altijd kan."
+    },
+    {
+      "question": "Melodieën, opbouw en grote emotionele momenten in popmuziek zijn ideeën die oorspronkelijk uit de klassieke muziek komen.",
+      "isTrue": true,
+      "explanation": "Correct. Veel fundamentele elementen van popmuziek zijn geworteld in klassieke tradities, ook al klinkt het eindresultaat heel anders."
+    },
+    {
+      "question": "Klassieke muziek heeft geen enkele invloed gehad op hoe popmuziek klinkt of is opgebouwd.",
+      "isTrue": false,
+      "explanation": "Popmuziek leunt op talloze principes uit de klassieke muziek, van melodieopbouw tot het gebruik van orkestrale instrumenten in grote producties."
+    },
+    {
+      "question": "Klassieke muziek kan patiënten helpen bij het omgaan met geheugenverlies.",
+      "isTrue": true,
+      "explanation": "Klopt. Onderzoek en klinische toepassingen laten zien dat klassieke muziek therapeutische effecten heeft, ook bij patiënten met geheugenproblemen."
+    },
+    {
+      "question": "Klassieke muziek wordt alleen gebruikt in concertzalen en heeft geen praktische toepassingen in de wetenschap of geneeskunde.",
+      "isTrue": false,
+      "explanation": "Klassieke muziek wordt actief ingezet in ziekenhuizen en therapiecentra vanwege de bewezen effecten op emoties, stress en neurologische aandoeningen."
+    },
+    {
+      "question": "Samplen van oude muziek geeft klassieke stukken steeds opnieuw een modern leven.",
+      "isTrue": true,
+      "explanation": "Precies zoals de tekst het omschrijft: door klassieke melodieën te verwerken in nieuwe nummers blijft die muziek relevant en hoorbaar voor nieuwe generaties."
+    },
+    {
+      "question": "Films gebruiken klassieke muziek alleen als achtergrondvulling zonder dat het echt iets toevoegt aan een scène.",
+      "isTrue": false,
+      "explanation": "Klassieke muziek versterkt juist de emotionele impact van filmscènes aanzienlijk. Spannende, verdrietige of heroïsche momenten krijgen meer gewicht door de muzikale ondersteuning."
+    },
+    {
+      "question": "Sommige klassieke stukken zijn wereldberoemd geworden doordat ze in films werden gebruikt.",
+      "isTrue": true,
+      "explanation": "Klopt. Films hebben klassieke muziek bij een enorm breed publiek geïntroduceerd, en bepaalde stukken zijn mede door hun gebruik in cinema iconisch geworden."
+    },
+    {
+      "question": "Klassieke muziek kan de fysieke gezondheid van mensen beïnvloeden.",
+      "isTrue": true,
+      "explanation": "Onderzoek heeft aangetoond dat klassieke muziek niet alleen emotionele maar ook fysieke effecten heeft op het lichaam, wat een van de redenen is voor het gebruik ervan in medische contexten."
+    },
+    {
+      "question": "Moderne dans en klassieke muziek hebben niets met elkaar te maken.",
+      "isTrue": false,
+      "explanation": "Klassieke muziek is juist een belangrijke inspiratiebron voor moderne dans. Choreografen gebruiken de dynamiek en emotionele lading van klassieke stukken om bewegingen en verhalen vorm te geven."
+    },
+    {
+      "question": "Beeldende kunst en muziek beïnvloeden elkaar al eeuwenlang.",
+      "isTrue": true,
+      "explanation": "Correct. De wisselwerking tussen schilderkunst en muziek is een lang en gedocumenteerd fenomeen in de kunstgeschiedenis, waarbij beide disciplines ideeën en emoties uitwisselen."
+    },
+    {
+      "question": "Klassieke muziek heeft invloed op zowel mode als uitstraling in de modewereld.",
+      "isTrue": true,
+      "explanation": "Klopt. De theatrale en elegante esthetiek van de klassieke muziekwereld heeft ontwerpers geïnspireerd en is terug te zien in haute couture en podiumpresentaties."
+    },
+    {
+      "question": "Popmuziek en klassieke muziek bestaan volledig los van elkaar en hebben nooit iets uitgewisseld.",
+      "isTrue": false,
+      "explanation": "Popmuziek heeft structureel elementen geleend van klassieke muziek, van melodieopbouw tot orkestrale arrangementen. De twee werelden zijn nauw met elkaar verbonden."
+    },
+    {
+      "question": "Klassieke muziek wordt in elektronische muziek nooit gebruikt als sample of inspiratiebron.",
+      "isTrue": false,
+      "explanation": "Elektronische muziek is juist een van de genres waar klassieke samples regelmatig opduiken, naast pop en hiphop."
+    },
+    {
+      "question": "Muziek helpt dansers om verhalen en gevoelens uit te drukken zonder woorden.",
+      "isTrue": true,
+      "explanation": "Correct. Dat is precies de kracht van de combinatie tussen dans en muziek. Beweging en geluid vertellen samen een verhaal dat woorden niet altijd kunnen vangen."
+    },
+    {
+      "question": "De ideeën van ritme en harmonie uit klassieke muziek zijn vandaag de dag nog terug te vinden in moderne architectuur.",
+      "isTrue": true,
+      "explanation": "Klopt. De principes die klassieke muziek en klassieke architectuur delen, zoals structuur, balans en verhoudingen, leven voort in hedendaags design."
+    },
+    {
+      "question": "Klassieke muziek heeft alleen invloed gehad op de westerse cultuur en niet op andere gebieden zoals wetenschap of geneeskunde.",
+      "isTrue": false,
+      "explanation": "Klassieke muziek heeft aantoonbaar invloed op wetenschappelijk onderzoek naar hersenfuncties en wordt wereldwijd ingezet in medische en therapeutische contexten."
+    },
+    {
+      "question": "Klassieke muziek kan emoties beïnvloeden.",
+      "isTrue": true,
+      "explanation": "Correct. Dit is een van de meest onderzochte effecten van klassieke muziek en een van de redenen dat het zo breed wordt ingezet in therapie en geneeskunde."
+    },
+    {
+      "question": "Het gebruik van klassieke muziek in films is een recent fenomeen dat pas in de 21e eeuw is begonnen.",
+      "isTrue": false,
+      "explanation": "Films gebruiken al tientallen jaren klassieke muziek om emoties te versterken. Een bekend voorbeeld als 2001: A Space Odyssey stamt al uit 1968."
+    },
+    {
+      "question": "Klassieke muziek kan mensen helpen omgaan met trauma.",
+      "isTrue": true,
+      "explanation": "Klopt. Therapiecentra en ziekenhuizen gebruiken klassieke muziek mede omdat het patiënten kan helpen bij het verwerken van emotionele problemen en trauma."
+    },
+    {
+      "question": "Alleen beeldende kunstenaars laten zich inspireren door klassieke muziek; schrijvers en andere kunstenaars doen dit nooit.",
+      "isTrue": false,
+      "explanation": "Hoewel de tekst zich richt op schilders, is de inspirerende werking van klassieke muziek breed gedocumenteerd binnen meerdere kunstdisciplines."
+    },
+    {
+      "question": "Klassieke muziek leeft vandaag de dag voort in populaire muziek.",
+      "isTrue": true,
+      "explanation": "Correct. Via directe invloeden, samples en het gebruik van orkestrale elementen is klassieke muziek een levend onderdeel van hedendaagse popmuziek."
+    },
+    {
+      "question": "Klassieke muziek heeft invloed op concentratie.",
+      "isTrue": true,
+      "explanation": "Klopt. Onderzoek toont aan dat klassieke muziek de concentratie kan verbeteren, wat een van de redenen is dat het populair is als studie- en werkmuziek."
+    },
+    {
+      "question": "Architectuur en muziek hebben niets gemeen omdat het totaal verschillende disciplines zijn.",
+      "isTrue": false,
+      "explanation": "Beide disciplines delen fundamentele principes zoals ritme, balans, structuur en harmonie. De overeenkomsten zijn al eeuwenlang onderwerp van gesprek onder architecten en musici."
+    },
+    {
+      "question": "Klassieke muziek wordt gebruikt in genres die er op het eerste gezicht ver van af staan, zoals hiphop.",
+      "isTrue": true,
+      "explanation": "Correct. Het gebruik van Für Elise in Nas' I Can is daar een duidelijk voorbeeld van. Klassieke muziek duikt op in genres die er stilistisch weinig mee lijken te hebben."
+    },
+    {
+      "question": "Klassieke muziek heeft geen effect op neurologische aandoeningen.",
+      "isTrue": false,
+      "explanation": "Onderzoek en klinische toepassingen laten zien dat klassieke muziek juist wel effecten kan hebben bij mensen met neurologische aandoeningen, wat een reden is voor het gebruik ervan in ziekenhuizen."
+    },
+    {
+      "question": "De sfeer van klassieke muziek is een inspiratiebron geweest voor mode-ontwerpers bij het maken van collecties.",
+      "isTrue": true,
+      "explanation": "Klopt. Ontwerpers putten uit de elegantie en theatraliteit van de klassieke muziekwereld en vertalen die naar kleding en presentatie."
+    },
+    {
+      "question": "Klassieke muziek heeft geen invloed op stressniveaus.",
+      "isTrue": false,
+      "explanation": "Onderzoek toont het tegendeel aan. Het verminderen van stress is een van de gedocumenteerde effecten van klassieke muziek en een reden voor het gebruik ervan in therapeutische omgevingen."
+    },
+    {
+      "question": "Muziekstukken worden net als gebouwen opgebouwd uit patronen en lagen.",
+      "isTrue": true,
+      "explanation": "Correct. Dit is precies de parallel die klassieke muziek en architectuur met elkaar deelt. Beide werken met structuur, herhaling en opbouw om een geheel te creëren."
+    },
+    {
+      "question": "Klassieke muziek kan alleen mensen met een muzikale achtergrond emotioneel raken.",
+      "isTrue": false,
+      "explanation": "Klassieke muziek heeft aantoonbaar emotionele effecten op een breed publiek, ongeacht muzikale achtergrond. Het wordt juist ingezet in ziekenhuizen en therapie voor mensen zonder enige muzikale opleiding."
+    },
+    {
+      "question": "Klassieke muziek heeft invloed gehad op meerdere kunstdisciplines, waaronder dans, schilderkunst en mode.",
+      "isTrue": true,
+      "explanation": "Correct. Uit de teksten blijkt duidelijk dat klassieke muziek een brede culturele voetafdruk heeft, ver buiten de concertzaal, in dans, beeldende kunst, mode en architectuur."
+    }
+  ]
+}

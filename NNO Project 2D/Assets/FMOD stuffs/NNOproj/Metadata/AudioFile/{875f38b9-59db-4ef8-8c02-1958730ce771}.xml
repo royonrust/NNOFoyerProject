@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{875f38b9-59db-4ef8-8c02-1958730ce771}">
+		<property name="assetPath">
+			<value>The Moonlit Woods of Fairyland - Pauken.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>317.29166666666669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6e90a1e4-7ae3-4fc8-9409-1fbcf2c9d5a6}</destination>
+		</relationship>
+	</object>
+</objects>

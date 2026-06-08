@@ -9,6 +9,7 @@ public class WeaponPartOverview : EditorWindow
     public static void Open() => GetWindow<WeaponPartOverview>("Weapon Part Overview");
     
     List<WeaponPart> loadedParts = new List<WeaponPart>();
+    WeaponPartRegistry registry;
 
     void LoadParts()
     {
@@ -22,16 +23,33 @@ public class WeaponPartOverview : EditorWindow
             if (part != null) loadedParts.Add(part);
         }
     }
+    
+    void OnFocus() => LoadParts();
 
     void OnGUI()
     {
-        if (GUILayout.Button("Refresh")) LoadParts();
-
+        EditorGUILayout.Space();
+        
+        registry = (WeaponPartRegistry)EditorGUILayout.ObjectField("Part Registry", registry, typeof(WeaponPartRegistry), false);
+        
+        if (registry != null && GUILayout.Button("Populate Registry"))
+        {
+            registry.parts = new List<WeaponPart>(loadedParts);
+            EditorUtility.SetDirty(registry);
+            AssetDatabase.SaveAssets();
+            Debug.Log($"Registry populated with {registry.parts.Count} parts.");
+        }
+        
+        EditorGUILayout.Space();
+        
         int columnWidth = 120;
         int rowHeight = 60;
         int columns = Mathf.Max(1, Mathf.FloorToInt(EditorGUIUtility.currentViewWidth / columnWidth));
 
-        var byWeaponType = loadedParts
+        var pendants = loadedParts.Where(p => p.stats.WeaponPartType == WeaponPartType.Pendant);
+        var nonPendants = loadedParts.Where(p => p.stats.WeaponPartType != WeaponPartType.Pendant);
+
+        var byWeaponType = nonPendants
             .GroupBy(p => p.stats.weaponType)
             .OrderBy(g => (int)g.Key);
 
@@ -54,10 +72,10 @@ public class WeaponPartOverview : EditorWindow
                 {
                     GUI.backgroundColor = WeaponPartUtils.GetRarityColor(part.stats.WeaponPartRarity);
                     GUIStyle style = new GUIStyle(GUI.skin.button);
-                    style.fontSize = Mathf.Clamp(36 - part.stats.partName.Length, 9, 14);
+                    style.fontSize = Mathf.Clamp(36 - part.stats.weaponPartName.Length, 9, 14);
                     style.wordWrap = true;
 
-                    if (GUILayout.Button($"{part.stats.partName}\n{part.stats.WeaponPartType}", style, GUILayout.Width(columnWidth), GUILayout.Height(rowHeight)))
+                    if (GUILayout.Button($"{part.stats.weaponPartName}", style, GUILayout.Width(columnWidth), GUILayout.Height(rowHeight)))
                     {
                         string path = AssetDatabase.GetAssetPath(part.gameObject);
                         GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);
@@ -72,13 +90,48 @@ public class WeaponPartOverview : EditorWindow
                         GUILayout.EndHorizontal();
                         GUILayout.BeginHorizontal();
                     }
-                }                          // ← inner foreach ends here
+                }
 
-                GUILayout.EndHorizontal(); // ← outside inner foreach
-                GUILayout.Space(6);        // ← outside inner foreach
+                GUILayout.EndHorizontal();
+                GUILayout.Space(6);
             }
             
             GUILayout.Space(14);
+        }
+
+        if (pendants.Any())
+        {
+            GUILayout.Space(14);
+            GUILayout.Label("Pendants", EditorStyles.boldLabel);
+
+            int current = 0;
+            GUILayout.BeginHorizontal();
+
+            foreach (var part in pendants.OrderByDescending(p => p.stats.WeaponPartRarity))
+            {
+                GUI.backgroundColor = WeaponPartUtils.GetRarityColor(part.stats.WeaponPartRarity);
+                GUIStyle style = new GUIStyle(GUI.skin.button);
+                style.fontSize = Mathf.Clamp(36 - part.stats.weaponPartName.Length, 9, 14);
+                style.wordWrap = true;
+
+                if (GUILayout.Button(part.stats.weaponPartName, style, GUILayout.Width(columnWidth), GUILayout.Height(rowHeight)))
+                {
+                    string path = AssetDatabase.GetAssetPath(part.gameObject);
+                    GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+                    EditorGUIUtility.PingObject(prefab);
+                    Selection.activeGameObject = prefab;
+                }
+                GUI.backgroundColor = Color.white;
+
+                current++;
+                if (current % columns == 0)
+                {
+                    GUILayout.EndHorizontal();
+                    GUILayout.BeginHorizontal();
+                }
+            }
+
+            GUILayout.EndHorizontal();
         }
     }
 }

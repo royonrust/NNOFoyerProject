@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: Pair 1
   m_EditorClassIdentifier: Assembly-CSharp::StatementPair
   correctStatement:
-    title: Cheese
-    description: Cheese is yummy
-    explanation: Cheese IS fucking delicious
+    title: Yes
+    description: Yes yes
   falseStatement:
-    title: Cheesen't
-    description: Cheese is yucky
-    explanation: Cheese is fucking delicious you absolute moron you fucking idiot
-      go check your brains out you fucking retarted son of a bitch
+    title: No
+    description: No no
+  explanation: It was yes
