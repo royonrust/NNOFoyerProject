@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class DisplaysActivater : MonoBehaviour
 {
-    public TextMeshProUGUI tmp;
     
     void Start()
     {
@@ -24,7 +23,5 @@ public class DisplaysActivater : MonoBehaviour
         string displayAmount = Display.displays.Length.ToString();
         string secondActive = secondDisplayActivated ? "yes" : "no";
 
-        tmp.text = $"Displays found: {displayAmount} \n" +
-                   $"Second display active: {secondActive}";
     }
 }
