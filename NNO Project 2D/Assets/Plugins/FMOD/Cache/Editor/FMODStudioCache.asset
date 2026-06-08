@@ -15,40 +15,12 @@ MonoBehaviour:
   Path: Assets/FMOD stuffs/NNOproj/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639161807717583126
+  lastModified: 639165463866781021
   FileSizes:
   - Name: Desktop
-    Value: 1488
+    Value: 1520
   Exists: 1
---- !u!114 &-7200152098653905331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Viool 2
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Viool 2
-  Guid:
-    Data1: -298273530
-    Data2: 1086684833
-    Data3: -532068430
-    Data4: 1467933444
-  Banks:
-  - {fileID: -4418817057492234594}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -6271326484322932483}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 317291
---- !u!114 &-6801950053711335107
+--- !u!114 &-8300651811509426624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,7 +44,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-6271326484322932483
+--- !u!114 &-7842215066545206877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,7 +54,87 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Viool 2/Vol Viool 2
+  m_Name: parameter:/Harp/Vol Harp
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Vol Harp
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3135774484
+    data2: 1962312551
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7545011941968261459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Viool 3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Viool 3
+  Guid:
+    Data1: -693189747
+    Data2: 1278881370
+    Data3: 196542908
+    Data4: 1637546845
+  Banks:
+  - {fileID: -4418817057492234594}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4613489571008128572}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 317291
+--- !u!114 &-5854967101522988394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Viool 1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Viool 1
+  Guid:
+    Data1: -1756737902
+    Data2: 1328047333
+    Data3: 1070101682
+    Data4: 526963232
+  Banks:
+  - {fileID: -4418817057492234594}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4035242038568651607}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 317291
+--- !u!114 &-4613489571008128572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Viool 3/Vol Viool 2
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
   Name: Vol Viool 2
   StudioPath: 
@@ -96,82 +148,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-5831861182310100358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Altviool/Vol Altviool
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Vol Altviool
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 1748653688
-    data2: 393751190
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-5651865265426256891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Brass/Vol Brass
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Vol Brass
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 1558384818
-    data2: 3334691691
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-5096479060922214762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Brass
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Brass
-  Guid:
-    Data1: 370464666
-    Data2: 1218329895
-    Data3: -1427171914
-    Data4: -1974764749
-  Banks:
-  - {fileID: -4418817057492234594}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -5651865265426256891}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 317291
 --- !u!114 &-4418817057492234594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,11 +163,63 @@ MonoBehaviour:
   Path: Assets/FMOD stuffs/NNOproj/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639161807717572917
+  lastModified: 639165463866781021
   FileSizes:
   - Name: Desktop
-    Value: 42012512
+    Value: 42013824
   Exists: 1
+--- !u!114 &-3349738023180523205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass/Vol Bass
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Vol Bass
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3874984779
+    data2: 2832847957
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3082917438164922720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slagwerk
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Slagwerk
+  Guid:
+    Data1: -1867974000
+    Data2: 1211433727
+    Data3: -2101467229
+    Data4: -429982602
+  Banks:
+  - {fileID: -4418817057492234594}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8300651811509426624}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 317291
 --- !u!114 &-3040993478382890914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +244,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-2593773881821983353
+--- !u!114 &-2746412914916968143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,25 +253,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Altviool
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Altviool
-  Guid:
-    Data1: -1439210078
-    Data2: 1325086322
-    Data3: -224267597
-    Data4: 1256993628
-  Banks:
-  - {fileID: -4418817057492234594}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -5831861182310100358}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 317291
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Altviool/Vol Altviool
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Vol Altviool
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1748653688
+    data2: 393751190
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2485817099799151091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,82 +390,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 390556
---- !u!114 &-783629554257928611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Harp
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Harp
-  Guid:
-    Data1: 1360892257
-    Data2: 1230832698
-    Data3: 1612933540
-    Data4: 1730361390
-  Banks:
-  - {fileID: -4418817057492234594}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -52491331229051871}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 317291
---- !u!114 &-57461103403345974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Viool 1/Vol Viool 1
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Vol Viool 1
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 2552177380
-    data2: 1109818227
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-52491331229051871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Harp/Vol Harp
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Vol Harp
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 3135774484
-    data2: 1962312551
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,22 +406,23 @@ MonoBehaviour:
   - {fileID: -9157667005119055671}
   - {fileID: -4418817057492234594}
   EditorEvents:
-  - {fileID: -7200152098653905331}
-  - {fileID: -783629554257928611}
-  - {fileID: 5904120292378037943}
-  - {fileID: 5149830234969207799}
-  - {fileID: 8521094869155092404}
-  - {fileID: 6830338397475242812}
-  - {fileID: 6728402359299797999}
-  - {fileID: -5096479060922214762}
-  - {fileID: -2593773881821983353}
+  - {fileID: 8037105063433819885}
+  - {fileID: 983256577364513251}
+  - {fileID: 4546771823966684854}
+  - {fileID: 8347047082841262219}
+  - {fileID: 7309865596099950838}
+  - {fileID: -3082917438164922720}
+  - {fileID: -5854967101522988394}
+  - {fileID: 1825036789608756686}
+  - {fileID: 6631844834085830109}
+  - {fileID: -7545011941968261459}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4418817057492234594}
   StringsBanks:
   - {fileID: -9157667005119055671}
   cacheVersion: 131859
-  cacheTime: 639161807717583126
+  cacheTime: 639165463866781021
   SerializableEventsDict:
   - key: event:/Viool 2
     index: 0
@@ -493,6 +442,8 @@ MonoBehaviour:
     index: 7
   - key: event:/Altviool
     index: 8
+  - key: event:/Viool 3
+    index: 9
 --- !u!114 &731999201925317124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,6 +472,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 264600
+--- !u!114 &880694115126480583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Viool 2/Vol Viool 2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Vol Viool 2
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 2791329061
+    data2: 1600305340
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &948773471962775831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +517,86 @@ MonoBehaviour:
   ID:
     data1: 1293265004
     data2: 626072836
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &983256577364513251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Harp
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Harp
+  Guid:
+    Data1: 1360892257
+    Data2: 1230832698
+    Data3: 1612933540
+    Data4: 1730361390
+  Banks:
+  - {fileID: -4418817057492234594}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7842215066545206877}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 317291
+--- !u!114 &1825036789608756686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Brass
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Brass
+  Guid:
+    Data1: 370464666
+    Data2: 1218329895
+    Data3: -1427171914
+    Data4: -1974764749
+  Banks:
+  - {fileID: -4418817057492234594}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8296010680013978929}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 317291
+--- !u!114 &2582824802011308632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Hout/Vol Hout
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Vol Hout
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 144104599
+    data2: 2763790170
   Type: 0
   IsGlobal: 0
   Labels: []
@@ -615,63 +670,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5149830234969207799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Bass
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Bass
-  Guid:
-    Data1: 475213181
-    Data2: 1108850117
-    Data3: 14476471
-    Data4: -2015653303
-  Banks:
-  - {fileID: -4418817057492234594}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 6902039180177459297}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 317291
---- !u!114 &5904120292378037943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Hout
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Hout
-  Guid:
-    Data1: 1962784123
-    Data2: 1123487625
-    Data3: -1293936256
-    Data4: 1401002378
-  Banks:
-  - {fileID: -4418817057492234594}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 6538713772386564619}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 317291
---- !u!114 &6346004743081558913
+--- !u!114 &4025391804336078675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -695,7 +694,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6538713772386564619
+--- !u!114 &4035242038568651607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -705,21 +704,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Hout/Vol Hout
+  m_Name: parameter:/Viool 1/Vol Viool 1
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Vol Hout
+  Name: Vol Viool 1
   StudioPath: 
   Min: 0
   Max: 1
   Default: 1
   ID:
-    data1: 144104599
-    data2: 2763790170
+    data1: 2552177380
+    data2: 1109818227
   Type: 0
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6728402359299797999
+--- !u!114 &4546771823966684854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -729,25 +728,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Viool 1
+  m_Name: event:/Hout
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Viool 1
+  Path: event:/Hout
   Guid:
-    Data1: -1756737902
-    Data2: 1328047333
-    Data3: 1070101682
-    Data4: 526963232
+    Data1: 1962784123
+    Data2: 1123487625
+    Data3: -1293936256
+    Data4: 1401002378
   Banks:
   - {fileID: -4418817057492234594}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -57461103403345974}
+  - {fileID: 2582824802011308632}
   MinDistance: 1
   MaxDistance: 20
   Length: 317291
---- !u!114 &6830338397475242812
+--- !u!114 &6631844834085830109
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -757,25 +756,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Slagwerk
+  m_Name: event:/Altviool
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Slagwerk
+  Path: event:/Altviool
   Guid:
-    Data1: -1867974000
-    Data2: 1211433727
-    Data3: -2101467229
-    Data4: -429982602
+    Data1: -1439210078
+    Data2: 1325086322
+    Data3: -224267597
+    Data4: 1256993628
   Banks:
   - {fileID: -4418817057492234594}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6801950053711335107}
+  - {fileID: -2746412914916968143}
   MinDistance: 1
   MaxDistance: 20
   Length: 317291
---- !u!114 &6902039180177459297
+--- !u!114 &7309865596099950838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -784,21 +783,53 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Bass/Vol Bass
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Vol Bass
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 3874984779
-    data2: 2832847957
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Piano
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Piano
+  Guid:
+    Data1: 384306815
+    Data2: 1246899727
+    Data3: -1675261050
+    Data4: 997154108
+  Banks:
+  - {fileID: -4418817057492234594}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4025391804336078675}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 317291
+--- !u!114 &8037105063433819885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Viool 2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Viool 2
+  Guid:
+    Data1: -298273530
+    Data2: 1086684833
+    Data3: -532068430
+    Data4: 1467933444
+  Banks:
+  - {fileID: -4418817057492234594}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 880694115126480583}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 317291
 --- !u!114 &8038250240592768402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,7 +860,31 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8521094869155092404
+--- !u!114 &8296010680013978929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Brass/Vol Brass
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Vol Brass
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1558384818
+    data2: 3334691691
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8347047082841262219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -839,21 +894,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Piano
+  m_Name: event:/Bass
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Piano
+  Path: event:/Bass
   Guid:
-    Data1: 384306815
-    Data2: 1246899727
-    Data3: -1675261050
-    Data4: 997154108
+    Data1: 475213181
+    Data2: 1108850117
+    Data3: 14476471
+    Data4: -2015653303
   Banks:
   - {fileID: -4418817057492234594}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6346004743081558913}
+  - {fileID: -3349738023180523205}
   MinDistance: 1
   MaxDistance: 20
   Length: 317291

@@ -40,6 +40,7 @@ public class Slider1 : MonoBehaviour
         studioEventEmitter.SetParameter(parameter, slider.value);
         ChangePercentageText();
 
+
         if (sectionCanvasGroup == null)
             return;
 
